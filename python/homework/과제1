@@ -1,0 +1,15 @@
+#이름
+firstName=str(input("성을 입력해주세요:"))
+lastName=str(input("성을 제외한 이름을 입력해주세요:"))
+print(firstName+lastName)
+
+#나이계산
+userOld=int(input("출생년도를 입력해주세요:"))
+userYear=int(input("올해 연도를 입력해주세요:"))
+print(userYear-userOld+1)
+
+#시간 계산하기 
+time=int(input("몇 초가 지났는지 입력해주세요:"))
+userMin=time//60
+userSec=time%60
+print(userMin,"분",userSec,"초 지났습니다.")
