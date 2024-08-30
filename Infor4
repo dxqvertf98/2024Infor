@@ -1,0 +1,73 @@
+New! 단축키 … 첫 글자를 탐색할 수 있도록 Drive 단축키가 업데이트되었습니다.
+#문자열 연결(쉼표만 띄어쓰기 가능)
+print("1""2""3")
+print("1"+"2"+"3")
+print("1","2","3")
+
+
+#연산자
+print(1+1)
+print(1+2)
+print(1*2)
+print(4/3)
+print(4//2) #몫만 구함ㅇㅇ
+print(1%2) #나머지 구하기
+print(2**3) #제곱 출력
+
+
+#비교연산자(FTFT)
+print(10>15)
+print(10<15)
+print(10==15)
+print(10!=15)
+
+
+#논리연산자(TFTTFT, 활용을 어케하지?)
+print(True and True)
+print(True and False)
+print(True or False)
+print(False or True)
+print(not True)
+print(not False)
+
+
+#대입연산자
+x=20
+x+=10 #x=x+10과 동일함
+print(x)
+
+x=20
+x-=10
+print(x) #x=x-10과 동일함
+
+x=20
+x*=3 #x=x*3과 동일함
+print(x)
+
+x=20
+x/=3
+print(3)
+
+x=20
+x%=3 #x=x%3과 동일함
+print(x)
+
+x=20
+x//=3
+print(x) #굳이 말 해야겠냐?
+
+
+#프린트 5장 체크
+print("hi"*3)
+print("1 더하기 1은",1+1,"이다")
+x,y,z=10,20,30 #하나하나 하는것보다 더 빠름ㅇㅇ
+print(x,y,z)
+
+
+#input
+print(input("니 이름 입력해봐라: "))
+
+
+#변수
+userName=input("이름을 입력해주세요:")
+print("사용자님의 성함은",userName,"입니다.")
