@@ -96,3 +96,109 @@ num6=int(input("num6를 입력해주세요:"))
 num7=int(input("num7을 입력해주세요:"))
 print(num6+num7) #stirng, float도 동일함ㅇㅇ, 근데 다르게 입력받은건 안되는듯
 print("사용자님의 성함은",userName,"입니다.")
+
+
+#자료형 확인
+num1=10
+print(type(num1)) #<class 'int'>
+
+num2=1.1
+print(type(num2)) #<class 'float'>
+
+num3=True
+print(type(num3)) #<class 'bool'>
+
+num4=[1,2,3]
+print(type(num4)) #<class 'list'>
+
+num5="니얼굴"
+print(type(num5)) #<class 'str'>
+
+
+#자료형*input
+a=input("a를 입력해주세요:")
+print("a의 자료형은",type(a),"입니다")
+
+num6=int(input("num6를 입력해주세요:"))
+num7=int(input("num7을 입력해주세요:"))
+print(num6+num7) #stirng, float도 동일함ㅇㅇ, 근데 다르게 입력받은건 안되는듯
+
+
+#문자열 포맷팅(String Formatting): 문자열 내 값 삽입, 형식에 맞게 조정
+name = "홍길동"
+age = 17
+
+#print(f"문자열 {}") 형식
+print(f"제 이름은 {name}이고 나이는 {age}살 입니다.") 
+
+#print("문자열 ...{0} {1} {2}.".format(a,b,c))
+print("제 이름은 {0}이고 나이는 {1}살 입니다.".format(name, age))
+
+
+#round함수
+x,y=map(float,input().split())
+print(f"입력값={round(x,2)},{round(y,2)}")
+
+'''
+map->float를 x,y 두 개에 할당할 때 필요
+split->input 값을 x,y로 자를 때 필요
+round->n자리까지 반올림하여 출력 ex)round(a,3)->a값을 반올림하여 셋째 자리까지 출력
+'''
+
+
+New! 단축키 … 첫 글자를 탐색할 수 있도록 Drive 단축키가 업데이트되었습니다.
+#if 예제
+rain=False
+if rain==True:
+    print("우산을 들고")
+print("학교에 간다")
+
+
+#if else 예제
+password = input("암호를 입력하세요:")
+if password == "니얼굴":
+    print("암호가 해제되었습니다. 기밀 정보에 출입할 수 있습니다")
+else:
+    print("ERROR."*15,"당신은 누구입니까?"*10,"정보국이 당신의 뒤를 쫓을 것입니다."*10,"경고"*60,"당신의 정보는 우리에게 있습니다"*25,"조만간 뵙겠습니다"*39)
+
+x=int(input())
+if x%2==0:
+    print("앙 짝수띠")
+else:
+    print("홀수년 꺼져")
+
+
+#elif 예제
+age=int(input("나이를 입력해주세요:"))
+if age>=20:
+    print("성인")
+elif age>=13: #13<=age<20
+    print("청소년")
+else:
+    print("어린놈의자식이이딴거나입력하고앉아있지말고건실한걸해!")
+
+x=int(input())
+if x%4==0:
+    print("4의 배수")  
+elif x%3==0:
+    print("3의 배수")
+elif x%2==0:
+    print("2의 배수") #4와 2의 위치가 바뀌면, 4의 배수를 넣을 시 2의 배수라고 출력됨. 다른 수를 출력하길 원하면 else 사용 ㄱㄱ
+
+x=int(input())
+if x>10 and x%2==0:
+    print("10을 초과하는 짝수")
+
+
+
+#중첩제어구조
+a=int(input())
+if 1<=a<=3:
+    if a==1:
+        print("가위")
+    elif a==2:
+        print("바위")
+    elif a==3:
+        print("보")
+else:
+    print("다시해")
