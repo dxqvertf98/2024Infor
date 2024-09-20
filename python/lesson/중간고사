@@ -299,3 +299,51 @@ i=int(input())
 for j in range(i,0,-1):
     if i%j==0:
         print(j)
+
+#1
+for i in range(3):
+    print("i:",i)  #i값에 대해 j가 반복
+    for j in range(4):  
+        print(j)
+
+
+#2
+for i in range(5):
+    print("i:",i)  #i값에 대해 j가 반복
+    for j in range(2):  
+        print(j)
+
+
+#사각형 출력
+line=5
+for i in range(line):
+  print("□",end='')  #end='' 다음 줄로 이동하지 않겠다.(작은따옴표 2개)
+
+
+#정사각형 출력
+line=5
+for ga in range(line):
+  for se in range(line):
+    print("■",end='')
+  print()  #세로 칸을 모두 출력하고 다음줄로 이동
+
+
+#원하는 사각형 출력
+ga=int(input("가로 길이는?"))
+se=int(input("세로 길이는?"))
+for _ in range(ga):    
+  for _ in range(se):
+    print("■",end='')
+  print()  #세로 칸을 모두 출력하고 다음줄로 이동 
+
+
+
+#페르마의 밀실 코드
+code=input()
+for i in range(len(code)):
+    if code[i]=='1':
+        print("■",end='')
+    else:
+        print("□",end='')
+    if (i+1)%int((len(code)**(1/2)))==0:  #여기 왜 elif 쓰면 안됨? 
+        print()
