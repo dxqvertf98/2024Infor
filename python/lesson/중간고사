@@ -347,3 +347,152 @@ for i in range(len(code)):
         print("□",end='')
     if (i+1)%int((len(code)**(1/2)))==0:  #여기 왜 elif 쓰면 안됨? 
         print()
+
+#random
+import random 
+print(random.random())
+print(random.randint(1,10))
+
+
+#숫자 맞추기
+import random
+sol=random.randint(1,20) #컴퓨터가 설정한 숫자 sol
+count=0
+while True:
+  number=int(input("숫자 입력:"))
+  count+=1  #입력할 때 마다 count 값 증가
+  if sol==number:
+    break #맞추었으면 반복문 빠져나오기
+  elif number > sol:
+    print(number,"보다 작습니다")
+  else:
+    print(number,"보다 큽니다")
+print(count,"번 만에 맞았습니다.")  
+
+
+#구구단 ver1
+import random
+print("♬구구단을 외우자! 구구단을 외우자!♬")
+for i in range(10):
+  a=random.randint(2,9)
+  b=random.randint(1,9)
+  print("{0} x {1} ? {2}".format(a,b,a*b))
+
+
+#369게임 ver2
+import random
+print("♬ 구구단을 외우자! 구구단을 외우자!♬")
+for i in range(10):
+  a=random.randint(2,9)
+  b=random.randint(1,9)
+  answer=int(input(f"{a} x {b} = ? "))
+  if answer==a*b:
+    print("정답입니다!")
+  else:
+    print("땡! 틀렸습니다. -구구단 종료-")
+    break
+
+
+#구구단 ver3
+import random
+print("♬ 구구단을 외우자! 구구단을 외우자!♬")
+num=0 #틀린 횟수 저장
+for i in range(10):
+  a=random.randint(2,9)
+  b=random.randint(1,9)
+  answer=int(input(f"{a} x {b} = ? "))
+  if answer==a*b:
+    print("정답입니다!")
+  else:
+    print('땡! 3번 반복해서 읽어봅시다')
+    print("------------------------")
+    for _ in range(3):
+      print(f"{a} x {b} = {a*b}")
+    print("------------------------")
+    num+=1   #틀린 횟수 증가 
+
+print("구구단이 종료되었습니다.")
+if num>=3:
+  print("산수실력을 좀 향상시켜야 할 것 같아요...")
+else:
+  print("훌륭한 산수실력을 가지셨어요")
+
+for i in range(1,101):
+    if '3' in str(i) or '6' in str(i) or '9' in str(i):
+        print("짝")
+    else:
+        print(i)
+
+
+#369게임 ver1
+print("369~ 369~ 369~")
+print("1~100범위에서 369게임을 시작합니다!")
+for i in range(1,101):
+    say=input()
+    if '3' in str(i) or '6' in str(i) or '9' in str(i): #3,6,9가 포함된 경우 
+        if say!="짝":  #입력값이 “짝”이 아닐경우
+            print("틀렸습니다 -369끝-")
+            break
+
+
+#369게임 ver2
+print("369~ 369~ 369~")
+print("1~100범위에서 369게임을 시작합니다!")
+for i in range(1,101):
+    say=input()
+    if '3' in str(i) or '6' in str(i) or '9' in str(i):  #3,6,9가 포함된 경우 
+        if say!="짝":  #짝을 외쳐야 되는데 외치지 않을 경우 
+            print("틀렸습니다 -369끝-")
+            break
+    else: #일반 숫자에 대해서
+        if say!=str(i): #숫자 값을 입력하지 않았다면
+            print("틀렸습니다 -369끝-")
+            break
+
+#continue
+for i in range(1,11):
+    if i%2==0:
+        continue
+    print(i)
+
+
+#프린트 p.13 문제1
+x = int(input())
+if x>10:
+    if x%2==0:
+        print("10 초과 짝수")
+    else:
+        print("10 초과 홀수")
+else:
+    print("10 이하")     
+
+
+#프린트 p.13 문제2
+for i in range(2):
+    print("i",i)
+    for j in range(3):
+        print(j)
+
+
+#프린트 p.13 문제3
+score=int(input())
+if score>=70:
+    print("합격")
+    if score==100:
+        print("우수상")
+else:
+    print("불합격")
+
+
+#프린트 p.13 문제4
+dan=int(input("몇 단임?"))
+for i in range(1,10):
+    print("{0}*{1}={2}".format(dan,i,dan*i))
+
+
+#프린트 p.13 문제5
+dan=int(input("몇 단까지?"))
+for i in range(2,dan+1):
+    for j in range(1,10):
+        print("{0}*{1}={2}".format(i,j,i*j))
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
